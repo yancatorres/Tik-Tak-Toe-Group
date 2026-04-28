@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tak Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="title-bar">
+    <h1><span class="x">X</span> · <span class="o">O</span></h1>
+    <p>Tic · Tak · Toe</p>
+  </div>
+
+  <!-- SET UP SCREEN -->
+  <div class="setup-screen" id="setupScreen">
+    <div class="player-input">
+      <label><span class="sym x">X</span> Player 1</label>
+      <input type="text" id="p1name" placeholder="Enter name..." maxlength="16" autocomplete="off">
+    </div>
+    <div class="player-input">
+      <label><span class="sym o">O</span> Player 2</label>
+      <input type="text" id="p2name" placeholder="Enter name..." maxlength="16" autocomplete="off">
+    </div>
+    <button class="start-btn" id="startBtn">Start Game</button>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div class="game-screen" id="gameScreen">
+
+    <div class="scoreboard">
+      <div class="score-card is-x" id="cardX">
+        <div class="player-name" id="nameX">Player X</div>
+        <div class="score-num" id="scoreX">0</div>
+      </div>
+      <div class="score-divider">
+        <div>DRAWS</div>
+        <div class="draws-count" id="scoreDraw">0</div>
+      </div>
+      <div class="score-card is-o" id="cardO">
+        <div class="player-name" id="nameO">Player O</div>
+        <div class="score-num" id="scoreO">0</div>
+      </div>
+    </div>
+
+    <div class="status-bar turn-x" id="statusBar">It's your turn</div>
+
+    <div class="board" id="board"></div>
+
+    <div class="actions">
+      <button class="btn" id="resetBtn">New Game</button>
+      <button class="btn danger" id="menuBtn">Change Players</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
