@@ -108,6 +108,31 @@ function resetGame() {
   state.over = false;
   renderBoard();
   updateStatus();
+  iniciarTimer();
+}
+
+let timerInterval = null;
+let segundos = 0;
+
+function iniciarTimer() {
+  clearInterval(timerInterval);
+  segundos = 0;
+  atualizarTimer();
+
+  timerInterval = setInterval(() => {
+    segundos++;
+    atualizarTimer();
+  }, 1000);
+}
+
+function atualizarTimer() {
+  const min = String(Math.floor(segundos / 60)).padStart(2, '0');
+  const seg = String(segundos % 60).padStart(2, '0');
+  $('timer').textContent = `${min}:${seg}`;
+}
+
+function pararTimer() {
+  clearInterval(timerInterval);
 }
 
 $('startBtn').addEventListener('click', () => {

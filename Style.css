@@ -147,6 +147,22 @@ body {
   display: flex;
 }
 
+/* TIMER */
+
+.timer {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 0.5rem;
+  
+}
+
+.timer.urgente {
+  color: #e8633a; /* fica vermelho quando o tempo tá acabando */
+}
+
 /* PLACAR */
 
 .scoreboard {
